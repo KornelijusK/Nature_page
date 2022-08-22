@@ -1,0 +1,249 @@
+/* Body area */
+
+body {
+    font-family: Roboto;
+}
+
+/* Header area */
+
+header {
+    background-color: rgb(194, 191, 191);
+    height: 90px;
+    width: 100%;
+    margin-bottom: 75px;    
+}
+
+nav img {
+    height: 80px;
+}
+
+nav {
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;    
+}
+
+nav a {
+    text-decoration: none;
+    color: black;        
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+ 
+nav a:nth-child(2) {
+    margin: 0 20px;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;    
+}
+
+/* Main section area */
+
+.main-section  {
+    width: 80%;
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.profile img { 
+    height: 150px;
+    border-radius: 25px;
+    margin-right: 50px;
+}
+
+/* Nežinau kaip kitiems sekėsi šitą nuotrauką pritempti prie dizaino, bet man pagal jos dabartinius išmatavimus nesigauna jos gražiai užapvalinti, 
+tai palikau stačiakampį. Kai kūriau savo portfolio paruošiau sau kvadratinę nuotrauką, kad padarius radius ji būtų taisyklingos formos. Čia nieko neliečiau. :)*/
+
+h1 {
+    font-weight: 600;
+}
+
+.description p {
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.description {
+    margin-bottom: 50px;
+}
+
+.mid-banner {
+    height: 140px;
+    background-image: url('./Images/flower-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 150px;
+    border-radius: 5px; 
+    border: 1px solid rgb(201, 197, 197);
+}
+
+.grid-section {    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* justify-items: st; */
+    align-content: center;
+    margin-bottom: 100px;      
+}
+
+.grid-item-1, .grid-item-2, .grid-item-3 {
+    height: 175px;
+    width: 70%;      
+    border-radius: 5px;  
+    border: 1px solid rgb(201, 197, 197); 
+    display: flex;  
+    justify-content: end;
+    align-items: end;
+    padding: 0 5px 5px 0;      
+}
+
+/* Tekstui div'uose naudojau ne positioną, o flexą. */
+
+.grid-item-1 {
+    background-image: url('./Images/Flower-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    justify-self: start; 
+}
+
+.grid-item-2 {
+    background-image: url('./Images/Tree.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-self: center;
+}
+
+.grid-item-3 {
+    background-image: url('./Images/Flower-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-self: end;
+}
+
+.grid-item-1 p, .grid-item-2 p, .grid-item-3 p {
+    color: white;
+    line-height: 1.3;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .mid-banner {
+        margin-bottom: 100px;
+    }
+
+    .grid-item-1, .grid-item-2, .grid-item-3 {        
+        width: 80%;                
+    }
+
+    .grid-section { 
+        grid-template-columns: auto auto;   
+        row-gap: 20%;         
+    }
+
+    .grid-item-2 {        
+        justify-self: end;
+    }
+
+    .grid-item-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 40%;
+        justify-self: center;
+    }
+    
+    .grid-item-1 p, .grid-item-2 p, .grid-item-3 p {
+        font-size: 1.25rem;        
+    }
+    
+  }
+  
+@media only screen and (max-width: 576px) {
+    
+    .links {
+        display: none;
+    }
+
+    nav {
+        display: inline;
+        text-align: center;
+    }
+
+    .main-section  {
+        width: 100%;
+        margin: auto;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .profile img {
+        margin: 0;
+    }
+
+    .description p {
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .mid-banner {
+        border-radius: 0px;
+        border: none;
+        margin-bottom: 50px;
+    }      
+
+    .grid-section { 
+        grid-template-columns: auto; 
+        gap: 50px;
+    }
+
+    .grid-item-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;  
+        width: 50%;   
+        justify-self: center;            
+    }
+
+    .grid-item-2 {    
+        grid-column-start: 1;
+        grid-column-end: 3;    
+        grid-row-start: 2;
+        grid-row-end: 3; 
+        width: 50%;   
+        justify-self: center;        
+    }
+
+    .grid-item-3 {    
+        grid-column-start: 1;
+        grid-column-end: 3;    
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 50%;
+        justify-self: center; 
+    }
+
+}
